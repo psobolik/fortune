@@ -1,0 +1,6 @@
+[default]
+port = 8080
+ident = 'Fortune Webservice'
+
+[release]
+port = 4040

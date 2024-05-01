@@ -1,0 +1,10 @@
+[package]
+name = "fortuneapi"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+config = "0.14.0"
+rocket = { version = "0.5.0", features = ["json"] }
+serde = { version = "1.0.200", features = ["derive"] }
+shared_library = { version = "0.1.0", path = "../shared" }
