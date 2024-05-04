@@ -1,5 +1,5 @@
 # Deploy Fortune API
-To deploy the Fortune API on an Apache server.
+To deploy the Fortune API on an Apache server, specifically `marconi`.
 
 1. Copy the data files to the server [^1]. 
 1. Install the application files in `/srv/fortuneapi`
@@ -20,10 +20,10 @@ To deploy the Fortune API on an Apache server.
 ## Notes:
 [^1] Since this app's data files are compatible with the BSD program (`fortune-mod`) and since that program puts them in `/usr/share/games/fortunes`, that might be a good location, as long as you don't mind each program using the same files.
 
-[^2] This file *must* be edited with the correct path to the data files.
+[^2] This file *must* be edited with the correct path to the data files, presumably `/usr/share/games/fortune` as discussed in Note 1.
 
 [^3] `Rocket.toml` is configured to use port 4040 for a release build.
 
 [^4] Assumes the API will be using port 4040; Edit it if the port is configured differently in `Rocket.toml`. 
 
-[^5] If all goes will, Apache will serve the API at http://localhost:4040/api/fortune.
+[^5] If all goes will, Apache will serve the API at http://marconi/api/fortune.
