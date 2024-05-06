@@ -3,6 +3,7 @@
  * Created 2024-05-02
  */
 mod fortune_config;
+mod cors;
 
 #[macro_use]
 extern crate rocket;
@@ -41,5 +42,5 @@ fn get_data_path() -> Result<PathBuf, Status> {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index, info])
+    rocket::build().mount("/", routes![index, info]).attach(cors::Cors)
 }
